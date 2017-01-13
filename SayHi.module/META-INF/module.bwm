@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_4gE_ANhOEeaHLOW4lgAdxw" targetNamespace="http://tns.tibco.com/bw/composite/SayHi.module" name="SayHi.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_JzEUUthQEeaHLOW4lgAdxw" name="sayhi" promote="ComponentSayHiProcess/sayhi">
+    <sca:interface.wsdl xmi:id="_JzEUVthQEeaHLOW4lgAdxw" interface="http://xmlns.example.com/20170111174835PLT#wsdl.interface(sayhi)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_JzE7YNhQEeaHLOW4lgAdxw" name="RestService" path="/sayhi/{value}" docBasePath="http://localhost:7777/SayHi.module" docResourcePath="SayHi" basePath="/" connector="sayhi.module.ResourcSayHi" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/sayhi.module.SayHiProcess-SayHi.json">
+      <operation xmi:id="_JzE7YdhQEeaHLOW4lgAdxw" operationName="get" nickname="get-sayhi" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_JzFicNhQEeaHLOW4lgAdxw">
+        <parameterMapping xmi:id="_JzGJgNhQEeaHLOW4lgAdxw" parameterName="value" parameterType="Path" required="true"/>
+      </parameters>
+      <clientFormat>json</clientFormat>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_JzE7YthQEeaHLOW4lgAdxw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_5b4f8NhOEeaHLOW4lgAdxw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5cCQ8NhOEeaHLOW4lgAdxw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5cF7UNhOEeaHLOW4lgAdxw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5cIXkNhOEeaHLOW4lgAdxw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5cLa4NhOEeaHLOW4lgAdxw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_5cOeMNhOEeaHLOW4lgAdxw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_5cQ6cNhOEeaHLOW4lgAdxw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_EJxUENhREeaHLOW4lgAdxw" name="user" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ELfyYNhREeaHLOW4lgAdxw" name="location" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_FdYGcNhQEeaHLOW4lgAdxw" name="ComponentSayHiProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FdYGcdhQEeaHLOW4lgAdxw" processName="sayhi.module.SayHiProcess"/>
+    <sca:service xmi:id="_JzEUUNhQEeaHLOW4lgAdxw" name="sayhi">
+      <sca:interface.wsdl xmi:id="_JzEUUdhQEeaHLOW4lgAdxw" interface="http://xmlns.example.com/20170111174835PLT#wsdl.interface(sayhi)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,49 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary Say Hi REST service.",
+    "description" : "Summary Say Hi REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/resourcsayhi" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-resourcsayhi",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a Location to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Location"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Location" : {
+      "type" : "object",
+      "required" : [ "note", "region", "user" ],
+      "properties" : {
+        "user" : {
+          "type" : "string"
+        },
+        "region" : {
+          "type" : "string"
+        },
+        "note" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

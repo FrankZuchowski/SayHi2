@@ -1,0 +1,13 @@
+{
+    "records": [],
+    "resources": [
+        {
+            "location": "Service Descriptors/sayhi.module.SayHiProcess-ResourcSayHi.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/sayhi.module.SayHiProcess-SayHi.json",
+            "type": "generated"
+        }
+    ]
+}
